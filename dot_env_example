@@ -1,0 +1,4 @@
+LISTEN_DJANGO=127.0.0.1:8000
+
+# Copied from "Connection details" on sandbox.neo4j.com
+DATABASE_URL=bolt://<username>:<password>@<address>:7687
