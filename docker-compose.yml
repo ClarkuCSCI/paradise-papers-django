@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  django:
+    build: "."
+    environment:
+      - DATABASE_URL
+    ports:
+      - "${LISTEN_DJANGO}:8000"
+    volumes:
+      - "./paradise_papers_search:/usr/src/paradise_papers_search"
