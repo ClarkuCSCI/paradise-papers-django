@@ -10,7 +10,7 @@ RUN apt update && \
   curl -fsSL https://debian.neo4j.com/neotechnology.gpg.key | apt-key add - && \
   add-apt-repository "deb https://debian.neo4j.com stable 4.1" && \
   apt update && \
-  apt install -y neo4j
+  apt install -y neo4j libgeos-dev
 
 # Next, install the Python modules
 ADD requirements.txt /usr/src/requirements.txt
