@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.12
 MAINTAINER PeStory@clarku.edu
 
 # Directories for the source code
@@ -8,7 +8,7 @@ RUN mkdir -p /usr/src/paradise_papers_search
 RUN apt update && \
   apt install -y apt-transport-https ca-certificates curl software-properties-common && \
   curl -fsSL https://debian.neo4j.com/neotechnology.gpg.key | apt-key add - && \
-  add-apt-repository "deb https://debian.neo4j.com stable 4.1" && \
+  echo "deb https://debian.neo4j.com stable 4.4" > /etc/apt/sources.list.d/neo4j.list && \
   apt update && \
   apt install -y neo4j libgeos-dev
 
