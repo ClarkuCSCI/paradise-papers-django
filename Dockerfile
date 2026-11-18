@@ -5,9 +5,10 @@ RUN mkdir -p /usr/src/paradise_papers_search
 
 # Install OS dependencies
 RUN apt update && \
-  apt install -y apt-transport-https ca-certificates curl software-properties-common && \
-  curl -fsSL https://debian.neo4j.com/neotechnology.gpg.key | apt-key add - && \
-  echo "deb https://debian.neo4j.com stable 4.4" > /etc/apt/sources.list.d/neo4j.list && \
+  apt install -y apt-transport-https ca-certificates wget && \
+  mkdir -p /etc/apt/keyrings && \
+  wget -O - https://debian.neo4j.com/neotechnology.gpg.key | gpg --dearmor -o /etc/apt/keyrings/neotechnology.gpg && \
+  echo 'deb [signed-by=/etc/apt/keyrings/neotechnology.gpg] https://debian.neo4j.com stable latest' | tee -a /etc/apt/sources.list.d/neo4j.list && \
   apt update && \
   apt install -y neo4j libgeos-dev
 
