@@ -1,4 +1,4 @@
-FROM python:3.12
+FROM python:3.11
 
 # Directories for the source code
 RUN mkdir -p /usr/src/paradise_papers_search
