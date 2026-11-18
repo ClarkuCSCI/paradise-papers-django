@@ -3,17 +3,6 @@ A simple Django web app for searching the Paradise Papers dataset backed by Neo4
 
 [Welcome to Paradise Paper Search App’s Django + Neomodel Tutorial!](https://neo4j-examples.github.io/paradise-papers-django/)
 
-<<<<<<< HEAD
-
-# Requirements
-
-- Python 3.7+
-- Django 2.2+
-- neo4j 5.x, 4.4
-- django-neomodel 0.1.1
-
-# Quickstart
-=======
 ## Setup with Docker
 
 First create an [sandbox database](https://sandbox.neo4j.com/), make sure to select **Paradise Papers by ICIJ** under **Pre-Built Data**, copy the credentials: username, password and bolt URL, you are going to need that later.
